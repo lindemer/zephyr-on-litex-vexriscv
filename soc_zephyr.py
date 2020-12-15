@@ -73,6 +73,7 @@ def SoCZephyr(soc_cls, **kwargs):
         def __init__(self,**kwargs):
             soc_cls.__init__(self,
                 cpu_type="vexriscv",
+                cpu_variant="secure",
                 max_sdram_size=0x10000000, # Limit mapped SDRAM to 256MB for now
                 **kwargs)
             self.platform.add_extension(arty_platform._i2s_pmod_io)
